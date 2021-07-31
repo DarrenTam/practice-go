@@ -178,7 +178,17 @@ func TestHashTable_Remove(t *testing.T) {
 		{
 			"Remove key TEST1 expect false",
 			fields{
-				hashValue: [10]HashValue{}, size: 10,
+				hashValue: [10]HashValue{
+					{"TEST", "6"},
+					{"TEST2", "99999"},
+					{"TEST3", "6"},
+					{"TEST4", "99999"},
+					{"TEST5", "6"},
+					{"TEST6", "99999"},
+					{"TEST7", "6"},
+					{"TEST8", "99999"},
+					{"TEST9", "6"},
+				}, size: 10,
 			},
 			args{"TEST1", "1", "TEST1"},
 			false,
