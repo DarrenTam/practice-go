@@ -183,13 +183,13 @@ func TestHashTable_Remove(t *testing.T) {
 			args{"TEST1", "1", "TEST1"},
 			false,
 		},
-		//{
-		//	"Remove key TEST10 expect true",
-		//	fields{
-		//		hashValue: [10]HashValue{}, size: 10},
-		//	args{"TEST1", "1", "TEST10"},
-		//	true,
-		//},
+		{
+			"Remove key TEST10 expect true",
+			fields{
+				hashValue: [10]HashValue{}, size: 10},
+			args{"TEST1", "1", "TEST10"},
+			true,
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
